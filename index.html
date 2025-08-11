@@ -45,7 +45,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: nowrap; /* default no wrap */
+    flex-wrap: nowrap;
   }
 
   nav ul li {
@@ -75,7 +75,7 @@
 
   /* Main content */
   main {
-    margin-top: 80px; /* space for fixed nav */
+    margin-top: 80px;
     padding: 60px 40px 100px 40px;
     background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
     min-height: calc(100vh - 80px);
@@ -162,7 +162,8 @@
     }
     main {
       padding: 40px 20px 80px 20px;
-      min-height: auto;
+      min-height: 100vh;
+      height: 100vh;
     }
     main h1 {
       font-size: 3rem;
@@ -192,6 +193,10 @@
     }
     main {
       padding: 30px 15px 60px 15px;
+      min-height: 100vh;
+      height: 100vh;
+      background-size: cover;
+      background-position: center center;
     }
     main h1 {
       font-size: 2.2rem;
@@ -243,7 +248,7 @@
 </main>
 
 <script>
-  // Highlight active link on page load
+  // Highlight active nav link based on current page
   const currentPath = window.location.pathname.split("/").pop();
   const links = document.querySelectorAll("nav a");
   links.forEach(link => {
